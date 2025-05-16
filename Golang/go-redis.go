@@ -1,3 +1,5 @@
+// go操作redis 实现连接池和json序列化
+
 package main
 
 import (
@@ -22,5 +24,4 @@ func main() {
 		return
 	}
 	fmt.Println("连接成功：",pong)
-
 }

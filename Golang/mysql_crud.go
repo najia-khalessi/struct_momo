@@ -2,7 +2,7 @@
 // 创建mysql容器 -- run: docker run --name my-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql   (my-secret-pw为密码)
 // 进入mysql容器内部可交互式shell -- exec :docker exec -it 8db3594ad401 /bin/sh   (8db3594ad401为容器id)
                                           docker exec -it my-mysql mysql -u root -p
-// 熟悉mysql的基本命令   :mysql -u root -p
+// 进入数据库: mysql -u root -p
 查看数据库 SHOW DATABASES;
 创建数据库 CREATE DATABASE TEST;
 进入数据库 USE Test;

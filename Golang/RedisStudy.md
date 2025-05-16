@@ -26,7 +26,10 @@ ps：为什么要在docker上启动redis？
 
 
 6. 实现go操作redis
--A:先是打开dockers里面的redis，创建容器，再运行redis文件
+-A:先是打开docker里面的redis，创建容器docker run --name my_redis -p 6379:6379 \
+-v /root/docker/redis/data:/data \
+-v /root/docker/redis/conf/redis.conf:/etc/redis/redis.conf \
+-d redis redis-server /etc/redis/redis.conf，进入容器docker exec -it my_redis redis-cli，再运行go-redis代码
 
 
 附加问题：端口耗尽后，释放端口需要经过4次挥手，也就是多少秒后可以复用新端口？

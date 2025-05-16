@@ -1,3 +1,6 @@
+
+
+
 package main
 
 import (
@@ -10,12 +13,13 @@ import (
 func producer(ch chan<- int, wg *sync.WaitGroup) {
 	defer wg.Done()
 	fmt.Println("Producer started.")
-	for i := 0; i < 10; i++ { // 生产 10 个数据
+	for i := 1; i < 11; i++ { // 生产 10 个数据
 		fmt.Printf("Producer produced: %d\n", i)
 		ch <- i // 将数据发送到 channel
 	}
 	close(ch) // 生产者完成，关闭通道
 	fmt.Println("Producer finished.")
+	fmt.Println("")
 }
 
 // 消费者函数
