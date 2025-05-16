@@ -1,3 +1,5 @@
+//多消费者+多生产者
+
 package main
 
 import (
@@ -14,8 +16,6 @@ func producer() {
 func consumer() {
 	
 }
-
-
 
 
 func main() {
